@@ -96,7 +96,7 @@ CREATE TABLE dbo.historico_consulta
 	  matricula int NOT NULL,
 	  cod_animal int NOT NULL,
 	  hora time NOT NULL,
-	  data_consulta smalldatetime NOT NULL
+	  data_consulta date NOT NULL
       , CONSTRAINT pk_historico_consulta PRIMARY KEY (cod_consulta)
       , CONSTRAINT fk_funcionario_historico FOREIGN KEY (matricula)
 		REFERENCES funcionario (matricula)
@@ -112,7 +112,7 @@ CREATE TABLE dbo.limpeza
 	  matricula int NOT NULL,
 	  cod_container int NOT NULL,
 	  hora_limpeza time NOT NULL,
-	  data_limpeza smalldatetime NOT NULL
+	  data_limpeza date NOT NULL
       , CONSTRAINT pk_limpeza PRIMARY KEY (cod_limpeza)
       , CONSTRAINT fk_funcionario_limpeza FOREIGN KEY (matricula)
 		REFERENCES funcionario (matricula)
@@ -121,7 +121,6 @@ CREATE TABLE dbo.limpeza
         ON DELETE CASCADE
         ON UPDATE CASCADE
    );
-
 
 CREATE TABLE dbo.acompanha
 (

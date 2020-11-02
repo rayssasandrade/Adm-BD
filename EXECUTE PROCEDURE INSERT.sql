@@ -63,7 +63,7 @@ EXECUTE consultauspInsert
    ,201600
    ,1
    ,"12:32:01"
-   ,"01/01/2020 12:32:01"
+   ,"01/01/2020"
 GO
 
 EXECUTE limpezauspInsert
@@ -71,11 +71,11 @@ EXECUTE limpezauspInsert
    ,201800
    ,1
    ,"12:32:01"
-   ,"01/01/2020 12:32:01"
+   ,"01/01/2020"
 GO
 
 EXECUTE acompanhauspInsert
 	1
-   ,201600
+   ,201800
 GO
 

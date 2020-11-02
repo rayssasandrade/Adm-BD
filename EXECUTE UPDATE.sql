@@ -76,6 +76,6 @@ GO
 
 EXECUTE acompanhauspUpdate
 	1
-   ,201800
+   ,201600
 GO
 

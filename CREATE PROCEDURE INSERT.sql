@@ -178,7 +178,7 @@ CREATE PROCEDURE consultauspInsert
 	@matricula int,
 	@cod_animal int,
 	@hora time,
-	@data_consulta smalldatetime
+	@data_consulta date
 AS
     BEGIN
         INSERT INTO historico_consulta(
@@ -202,7 +202,7 @@ CREATE PROCEDURE limpezauspInsert
 	@matricula int,
 	@cod_container int,
 	@hora_limpeza time,
-	@data_limpeza smalldatetime
+	@data_limpeza date
 AS
     BEGIN
         INSERT INTO limpeza(
