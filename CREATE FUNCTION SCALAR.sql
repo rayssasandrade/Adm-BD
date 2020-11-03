@@ -11,17 +11,19 @@ AS
 	END
 GO
 
-create FUNCTION retornaExisteSalario(@salario money)
-RETURNS nvarchar(3)
+alter FUNCTION retornaExisteSalario(@salario money)
+RETURNS bit
 AS 
 	BEGIN
 		DECLARE @existeSalario nvarchar(3)
-			select @existeSalario = 
-				CASE 
-					WHEN salario = @salario THEN 'Yes' 
-					WHEN salario = @salario THEN 'No'
-				END
-			FROM dbo.cargo
+			SET @existeSalario = (
+				    SELECT
+					CASE
+					WHEN EXISTS( 
+						SELECT 1 FROM dbo.cargo WHERE salario LIKE @salario)
+					THEN 1
+					ELSE 0
+					END)
 		RETURN (@existeSalario)
 	END
 GO

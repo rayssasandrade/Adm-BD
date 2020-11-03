@@ -132,9 +132,3 @@ CREATE TABLE dbo.acompanha
 	ON DELETE CASCADE
     ON UPDATE CASCADE
 );
-
-
-
-
-
-
